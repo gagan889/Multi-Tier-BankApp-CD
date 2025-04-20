@@ -35,10 +35,10 @@ kind: Service
 metadata:
   name: bankapp-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8080
-    nodePort: 32000
+    
   selector:
     app: bankapp
